@@ -2,7 +2,7 @@
  * @Author: FunctionSir
  * @License: AGPLv3
  * @Date: 2023-10-27 17:44:49
- * @LastEditTime: 2023-10-28 15:09:14
+ * @LastEditTime: 2023-10-28 17:50:43
  * @LastEditors: FunctionSir
  * @Description: PacAlias Version 0.1-alpha (HitoriGotoh)
  * @FilePath: /PacAlias/pacalias.go
