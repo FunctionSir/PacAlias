@@ -2,7 +2,7 @@
  * @Author: FunctionSir
  * @License: AGPLv3
  * @Date: 2023-10-27 17:43:29
- * @LastEditTime: 2023-10-28 16:18:04
+ * @LastEditTime: 2023-10-28 17:03:53
  * @LastEditors: FunctionSir
  * @Description: README
  * @FilePath: /PacAlias/README.md
@@ -35,3 +35,10 @@ Server = http://127.0.0.1:2090/?repo=$repo&arch=$arch&file=
 ```
 
 Then you can use the packages in repo core or extra of manjaro.  
+
+## Args
+
+-c/--conf: Conf file.  
+-p/--port: Http port.  
+-a/--addr: Addr to listen.  
+-1/--quite: No println.  
