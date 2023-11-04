@@ -6,7 +6,7 @@ default:
 install:
 	@echo 'Building PacAlias Version 0.1-alpha (HitoriGotoh)...'
 	@go build -o pacalias
-	@echo installing pacalias...
+	@echo 'Installing pacalias...''
 	@sudo cp pacalias /usr/bin
 	@sudo chmod 755 /usr/bin/pacalias
 	@sudo cp pacalias.conf /etc
