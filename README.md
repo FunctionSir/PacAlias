@@ -2,7 +2,7 @@
  * @Author: FunctionSir
  * @License: AGPLv3
  * @Date: 2023-10-27 17:43:29
- * @LastEditTime: 2024-01-11 23:38:28
+ * @LastEditTime: 2024-01-11 23:55:01
  * @LastEditors: FunctionSir
  * @Description: README
  * @FilePath: /PacAlias/README.md
@@ -37,6 +37,7 @@ sudo make install
 
 Here is a example:  
 Background: Using Arch Linux.  
+P.S. After updating conf file, you should restart the program.
 
 ```ini
 # At pacalis.conf
