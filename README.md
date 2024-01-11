@@ -2,7 +2,7 @@
  * @Author: FunctionSir
  * @License: AGPLv3
  * @Date: 2023-10-27 17:43:29
- * @LastEditTime: 2024-01-11 23:28:41
+ * @LastEditTime: 2024-01-11 23:33:50
  * @LastEditors: FunctionSir
  * @Description: README
  * @FilePath: /PacAlias/README.md
@@ -63,5 +63,5 @@ Then you can use the packages in repo core or extra of manjaro.
 -c/--conf: Conf file.  
 -p/--port: Http port.  
 -a/--addr: Addr to listen.  
--n/--notime: Do NOT add time info to the output.
+-n/--notime: Do NOT add time info to the output.  
 -q/--quite: No println.  
