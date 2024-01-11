@@ -2,7 +2,7 @@
  * @Author: FunctionSir
  * @License: AGPLv3
  * @Date: 2023-10-27 17:44:49
- * @LastEditTime: 2024-01-11 23:26:05
+ * @LastEditTime: 2024-01-12 00:02:57
  * @LastEditors: FunctionSir
  * @Description: PacAlias Version 0.2.0-beta (KannaKamui)
  * @FilePath: /PacAlias/pacalias.go
@@ -61,6 +61,9 @@ func http_handler(w http.ResponseWriter, r *http.Request) {
 	}
 	dest := Conf.Section(repo).Key("Dest").String()
 	if file == "/"+repo+".db" {
+		file = strings.ReplaceAll(file, repo, Conf.Section(repo).Key("OName").String())
+	}
+	if file == "/"+repo+".db.sig" {
 		file = strings.ReplaceAll(file, repo, Conf.Section(repo).Key("OName").String())
 	}
 	location := strings.ReplaceAll(dest, "$arch", arch) + file
