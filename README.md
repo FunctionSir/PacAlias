@@ -2,7 +2,7 @@
  * @Author: FunctionSir
  * @License: AGPLv3
  * @Date: 2023-10-27 17:43:29
- * @LastEditTime: 2024-01-11 23:33:50
+ * @LastEditTime: 2024-01-11 23:38:28
  * @LastEditors: FunctionSir
  * @Description: README
  * @FilePath: /PacAlias/README.md
@@ -18,7 +18,7 @@ This repo has a bin version of the program inside.
 If you are using an amd64 platform, just:  
 
 ```shell
-sudo ./install.sh
+sudo bash install.sh
 ```
 
 You can build yourself, just:  

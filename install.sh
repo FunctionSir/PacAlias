@@ -1,14 +1,14 @@
 #!/bin/bash
 ###
- # Author: FunctionSir
- # License: AGPLv3
- # Date: 2023-11-04 14:23:27
- # LastEditTime: 2023-11-04 14:23:38
- # LastEditors: FunctionSir
- # Description: Installer for pacalias.
- # FilePath: /PacAlias/install.sh
+ # @Author: FunctionSir
+ # @License: AGPLv3
+ # @Date: 2023-11-04 14:23:27
+ # @LastEditTime: 2024-01-11 23:36:56
+ # @LastEditors: FunctionSir
+ # @Description: -
+ # @FilePath: /PacAlias/install.sh
 ###
-echo 'Installing pacalias...''
+echo 'Installing pacalias...'
 sudo cp pacalias /usr/bin
 sudo chmod 755 /usr/bin/pacalias
 sudo cp pacalias.conf /etc
