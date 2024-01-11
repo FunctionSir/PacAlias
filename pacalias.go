@@ -2,9 +2,9 @@
  * @Author: FunctionSir
  * @License: AGPLv3
  * @Date: 2023-10-27 17:44:49
- * @LastEditTime: 2023-10-28 17:50:43
+ * @LastEditTime: 2024-01-11 23:26:05
  * @LastEditors: FunctionSir
- * @Description: PacAlias Version 0.1-alpha (HitoriGotoh)
+ * @Description: PacAlias Version 0.2.0-beta (KannaKamui)
  * @FilePath: /PacAlias/pacalias.go
  */
 package main
@@ -22,6 +22,7 @@ import (
 var ConfPath string = "pacalias.conf"
 var Conf *ini.File = nil
 var NoLog bool = false
+var NoTime bool = false
 var ListenAddr string = "127.0.0.1"
 var ListenPort string = "2090"
 
@@ -38,9 +39,10 @@ func args_parser() {
 			case "-a", "--addr":
 				ListenAddr = os.Args[i+1]
 				i++
+			case "-n", "--notime":
+				NoTime = true
 			case "-q", "--quiet":
 				NoLog = true
-				i++
 			}
 		}
 	}
@@ -51,7 +53,11 @@ func http_handler(w http.ResponseWriter, r *http.Request) {
 	arch := r.URL.Query().Get("arch")
 	file := r.URL.Query().Get("file")
 	if !NoLog {
-		fmt.Println(time.Now().String() + " <- repo=" + repo + ",arch=" + arch + ",file=" + file[1:])
+		logStr := "<- repo=" + repo + ",arch=" + arch + ",file=" + file[1:]
+		if !NoTime {
+			logStr = time.Now().String() + " " + logStr
+		}
+		fmt.Println(logStr)
 	}
 	dest := Conf.Section(repo).Key("Dest").String()
 	if file == "/"+repo+".db" {
@@ -61,13 +67,17 @@ func http_handler(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Location", location)
 	w.WriteHeader(301)
 	if !NoLog {
-		fmt.Println(time.Now().String() + " -> " + location)
+		logStr := "-> " + location
+		if !NoTime {
+			logStr = time.Now().String() + " " + logStr
+		}
+		fmt.Println(logStr)
 	}
 }
 
 func welcome() {
 	if !NoLog {
-		fmt.Println("PacAlias Ver 0.1-alpha (HitoriGotoh)")
+		fmt.Println("PacAlias Ver 0.2.0-beta (KannaKamui)")
 		fmt.Println("This is a free (libre) software under AGPLv3")
 		fmt.Println("Conf File: " + ConfPath)
 		fmt.Println("Listen Addr: " + ListenAddr)

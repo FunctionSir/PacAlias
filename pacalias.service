@@ -1,4 +1,4 @@
 [Service]
-ExecStart=pacalias -c /etc/pacalias.conf
+ExecStart=pacalias -c /etc/pacalias.conf -n
 [Install]
 WantedBy=multi-user.target

@@ -1,11 +1,11 @@
 # Makefile for PacAlias.
 default:
 	@echo 'Building PacAlias Version 0.1-alpha (HitoriGotoh)...'
-	@go build -o pacalias
+	@go build -ldflags '-s -w' -o pacalias
 	@echo 'Done! Output binary is "pacalias".'
 install:
 	@echo 'Building PacAlias Version 0.1-alpha (HitoriGotoh)...'
-	@go build -o pacalias
+	@go build -ldflags '-s -w' -o pacalias
 	@echo 'Installing pacalias...''
 	@sudo cp pacalias /usr/bin
 	@sudo chmod 755 /usr/bin/pacalias

@@ -2,18 +2,40 @@
  * @Author: FunctionSir
  * @License: AGPLv3
  * @Date: 2023-10-27 17:43:29
- * @LastEditTime: 2023-11-03 11:45:15
+ * @LastEditTime: 2024-01-11 23:28:41
  * @LastEditors: FunctionSir
  * @Description: README
  * @FilePath: /PacAlias/README.md
 -->
 # PacAlias
 
-Give pacman repo a alias.
+Current Version: 0.2.0-beta (KannaKamui)  
+Give pacman repo a alias.  
+
+## How to make and/or install
+
+This repo has a bin version of the program inside.  
+If you are using an amd64 platform, just:  
+
+```shell
+sudo ./install.sh
+```
+
+You can build yourself, just:  
+
+```shell
+make
+```
+
+Make and install is easy too, just:  
+
+```shell
+sudo make install
+```
 
 ## How to use
 
-There is a example:  
+Here is a example:  
 Background: Using Arch Linux.  
 
 ```ini
@@ -41,4 +63,5 @@ Then you can use the packages in repo core or extra of manjaro.
 -c/--conf: Conf file.  
 -p/--port: Http port.  
 -a/--addr: Addr to listen.  
+-n/--notime: Do NOT add time info to the output.
 -q/--quite: No println.  
