@@ -9,7 +9,7 @@ install:
 	@echo 'Installing pacalias...''
 	@sudo cp pacalias /usr/bin
 	@sudo chmod 755 /usr/bin/pacalias
-	@sudo cp pacalias.conf /etc
+	@sudo cp -n pacalias.conf /etc
 	@sudo cp pacalias.service /etc/systemd/system
 	@echo 'Done! Use "systemctl enable --now pacalias" to start and enable it.'
 clean:
