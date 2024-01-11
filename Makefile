@@ -1,10 +1,10 @@
 # Makefile for PacAlias.
 default:
-	@echo 'Building PacAlias Version 0.1-alpha (HitoriGotoh)...'
+	@echo 'Building PacAlias Version 0.2.0-beta (KannaKamui)...'
 	@go build -ldflags '-s -w' -o pacalias
 	@echo 'Done! Output binary is "pacalias".'
 install:
-	@echo 'Building PacAlias Version 0.1-alpha (HitoriGotoh)...'
+	@echo 'Building PacAlias Version 0.2.0-beta (KannaKamui)...'
 	@go build -ldflags '-s -w' -o pacalias
 	@echo 'Installing pacalias...''
 	@sudo cp pacalias /usr/bin

@@ -3,7 +3,7 @@
  # @Author: FunctionSir
  # @License: AGPLv3
  # @Date: 2023-11-04 14:23:27
- # @LastEditTime: 2024-01-11 23:50:35
+ # @LastEditTime: 2024-01-11 23:52:04
  # @LastEditors: FunctionSir
  # @Description: -
  # @FilePath: /PacAlias/install.sh
